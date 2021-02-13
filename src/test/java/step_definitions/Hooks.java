@@ -24,7 +24,7 @@ public class Hooks {
 		Driver.getDriver().manage().timeouts().
 		implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitTimeout")), TimeUnit.SECONDS);
 		Driver.getDriver().manage().window().maximize();
-		Driver.getDriver().get(ConfigReader.getProperty("url_test"));
+		Driver.getDriver().get(ConfigReader.getProperty("url"));
 		DBUtils.createConnection();
 		
 	}
@@ -42,30 +42,30 @@ public class Hooks {
 
 
 
-	@After ("@duotify")
-	public void tearDownScenario(Scenario scenario) {
-		
-		if(scenario.isFailed()) {
-			byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-			
-			String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-			
-			scenario.attach(screenshot, "image/png", "Screenshot"+date);
-		}
-		
-		
-		
-		Driver.quit();
+//	@After ()
+//	public void tearDownScenario(Scenario scenario) {
+//
+//		if(scenario.isFailed()) {
+//			byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+//
+//			String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//
+//			scenario.attach(screenshot, "image/png", "Screenshot"+date);
+//		}
+//
+//
+//
+//		Driver.quit();
+//
+//		DBUtils.close();
+//	}
 
-		DBUtils.close();
-	}
 
-
-	@After ("@duotify_db_only")
-	public void tearDownScenarioDB(Scenario scenario) {
-
-		DBUtils.close();
-	}
+//	@After ()
+//	public void tearDownScenarioDB(Scenario scenario) {
+//
+//		DBUtils.close();
+//	}
 	
 
 }
