@@ -37,30 +37,32 @@ public class Hooks {
 	}
 
 
-	@After ("@loan")
-	public void tearDownScenario(Scenario scenario) {
-		
-		if(scenario.isFailed()) {
-			byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-			
-			String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-			
-			scenario.attach(screenshot, "image/png", "Screenshot"+date);
-		}
-		
-		
-		
-		Driver.quit();
 
-		DBUtils.close();
-	}
+//	@After ()
+//	public void tearDownScenario(Scenario scenario) {
+//
+//		if(scenario.isFailed()) {
+//			byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+//
+//			String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//
+//			scenario.attach(screenshot, "image/png", "Screenshot"+date);
+//		}
+//
+//
+//
+//		Driver.quit();
+//
+//		DBUtils.close();
+//	}
 
 
-	@After ("@loan_db_only")
-	public void tearDownScenarioDB(Scenario scenario) {
+//	@After ()
+//	public void tearDownScenarioDB(Scenario scenario) {
+//
+//		DBUtils.close();
+//	}
 
-		DBUtils.close();
-	}
 	
 
 }

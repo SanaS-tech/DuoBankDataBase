@@ -9,11 +9,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith (Cucumber.class)
 
 @CucumberOptions (
-		
 
-		
+		tags = "@sana",    //"@negative or @smoke", "@smoke and @negative and @login"
 
-		tags = "@katerina or @katerina_db_only",    //"@negative or @smoke", "@smoke and @negative and @login"
 
 		
 		features = "src/test/resources",  // feature file folder path
