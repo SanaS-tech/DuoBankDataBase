@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 		
 
-		tags = "@katerina or @katerina_db_only",    //"@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@api",    //"@negative or @smoke", "@smoke and @negative and @login"
 
 		
 		features = "src/test/resources",  // feature file folder path
