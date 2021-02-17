@@ -17,7 +17,7 @@ public class Hooks {
 	
 	
 	
-	@Before ("@loan")
+	@Before ()
 	public void setupScenario() {
 
 
@@ -29,7 +29,7 @@ public class Hooks {
 		
 	}
 
-	@Before ("@loan_db_only")
+	@Before ()
 	public void setupScenarioDB() {
 
 		DBUtils.createConnection();
