@@ -6,12 +6,12 @@ Feature: Verify data mapping of the user details in the database
     And I click on Application List and click on View Details for borrower "2"
     Then I should land on the Mortgage Application page
 
-  @katerina
+  @katerina @parallel
   Scenario: Verify income info is correctly mapped with the DB
 
     And The income info should be correctly mapped in the users table of database for "Michael" "Borrower"
 
-  @katerina
+  @katerina @parallel
   Scenario: Verify econsent info is correctly mapped with the DB
 
     And The econsent info should be correctly mapped in the users table of database for "Michael" "Borrower"

@@ -24,7 +24,7 @@ public class DBUtils {
     public static void createConnection() {
        
         String url = ConfigReader.getProperty("db_url");
-        String user = ConfigReader.getProperty("db_username");
+        String user = ConfigReader.getProperty("db_user");
         String password = ConfigReader.getProperty("db_password");
         
         try {

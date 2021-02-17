@@ -1,6 +1,6 @@
 Feature:  Column names
 
-  @katerina_db_only
+  @katerina_db_only @parallel
   Scenario: Verify column names per business requirement document
 
     When I retrieve column names for the "tbl_mortagage" table for Employer and Income tab
@@ -33,7 +33,7 @@ Feature:  Column names
       | co_monthly_dividends    |
       | add_belong              |
 
-  @katerina_db_only
+  @katerina_db_only  @parallel
   Scenario: Verify table names per business requirement document
 
     When I retrieve column names for the "tbl_mortagage" table for EConsent tab

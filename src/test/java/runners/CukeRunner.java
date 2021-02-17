@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		
 
 
-		tags = "@smoke",    //"@negative or @smoke", "@smoke and @negative and @login"
+		tags = "@parallel",    //"@negative or @smoke", "@smoke and @negative and @login"
 
 		
 		features = "src/test/resources",  // feature file folder path
@@ -24,7 +24,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				    "pretty", // add more details onto the console report
 				    "rerun:target/failed-scenarios.txt" // to create a text file with the paths for failed scenarios to be re-run
 		         }  
-		
+
 //		,dryRun = true  // to run the test without launching, we need this to generate step def snippets
 		
 		,monochrome = true  // to display console characters correctly in Windows

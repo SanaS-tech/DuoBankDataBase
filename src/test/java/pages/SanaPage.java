@@ -35,7 +35,13 @@ public class SanaPage {
 	public WebElement applicationListButton;
 
 	@FindBy (xpath = "//a[@href='mortagageloandegtails.php?id=202']")
-	public WebElement viewDetailsButton;
+	public WebElement viewDetailsInland;
+
+	@FindBy (xpath = "//a[@href='mortagageloandegtails.php?id=203']")
+	public WebElement viewDetailsOffland;
+
+	@FindBy (xpath = "//a[@href='mortagageloandegtails.php?id=204']")
+	public WebElement viewDetailsMidland;
 
 	@FindBy (xpath = "(//table[@class='table']//tbody//td)[1]")
 	public WebElement bName;
